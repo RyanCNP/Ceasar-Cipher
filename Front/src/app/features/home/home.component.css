@@ -101,15 +101,18 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 5rem 10%;
-    background: var(--background-color2); /* Contraste com o mármore do hero */
+    background: white;  /* Carrara Marble */
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 .feature-card {
     text-align: center;
     padding: 3rem;
-    border: 1px solid rgba(212, 175, 55, 0.2); /* Borda dourada suave */
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Borda dourada suave */
     transition: all 0.3s ease;
-    background: var(--background-color); /* Carrara Marble */
+    background: var(--background-color2);
+    /* Carrara Marble */
 
     .icon {
         font-size: 3rem;
@@ -118,7 +121,8 @@
 
     h3 {
         font-family: var(--text-primary-font);
-        color: var(--quinary-color); /* Verde Romano */
+        color: var(--quinary-color);
+        /* Verde Romano */
         margin-bottom: 1rem;
     }
 
@@ -175,7 +179,8 @@
 }
 
 .roman-list li span {
-    color: var(--quinary-color); /* Verde Romano para os números */
+    color: var(--quinary-color);
+    /* Verde Romano para os números */
     font-family: var(--text-primary-font);
     font-weight: bold;
     margin-right: 15px;
@@ -185,7 +190,8 @@
 .roman-seal {
     font-family: var(--text-primary-font);
     font-size: 5rem;
-    color: var(--shadow-color); /* Bronze */
+    color: var(--shadow-color);
+    /* Bronze */
     opacity: 0.15;
     border: 8px double var(--shadow-color);
     padding: 2rem;
