@@ -1,0 +1,74 @@
+.roman-navbar {
+    background-color: rgba(242, 242, 242, 0.95); /* Mármore com leve transparência */
+    border-bottom: 3px solid var(--secondary-color); /* Linha dourada inferior */
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(122, 92, 18, 0.2); /* Sombra bronze suave */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    .nav-title {
+        font-family: var(--text-primary-font);
+        font-size: 1.5rem;
+        color: var(--primary-color); /* Vermelho Imperial */
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+
+    a {
+        text-decoration: none;
+        font-family: var(--text-secondary-font);
+        color: var(--text-color);
+        font-weight: 600;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: var(--terciary-color); /* Roxo Imperial no hover */
+        }
+
+        &.active {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+        }
+    }
+
+    .btn-cipher {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        border: 1px solid var(--secondary-color);
+
+        &:hover {
+            background-color: var(--terciary-color);
+            color: var(--secondary-color);
+        }
+    }
+}
+
+.nav-logo {
+    width: 7rem;
+    height: 7rem;
+    margin-right: 0.5rem;
+}

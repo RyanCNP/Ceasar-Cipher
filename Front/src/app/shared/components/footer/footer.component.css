@@ -1,0 +1,80 @@
+.roman-footer {
+    background-color: var(--terciary-color); /* Roxo Imperial */
+    color: var(--background-color); /* Texto claro (Mármore) */
+    padding: 3rem 1rem 1rem 1rem;
+    border-top: 4px solid var(--secondary-color); /* Linha Dourada superior */
+    font-family: var(--text-secondary-font);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-brand {
+    .footer-eagle {
+        height: 60px;
+        filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(10deg);
+        /* O filtro acima tenta transformar a imagem em dourado metálico */
+    }
+
+    .footer-title {
+        font-family: var(--text-primary-font);
+        color: var(--secondary-color);
+        margin: 1rem 0;
+    }
+
+    .footer-tagline {
+        font-style: italic;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+}
+
+.footer-links {
+    h4 {
+        font-family: var(--text-primary-font);
+        color: var(--secondary-color);
+        margin-bottom: 1rem;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin-bottom: 0.5rem;
+
+            a {
+                color: var(--background-color);
+                text-decoration: none;
+                transition: 0.3s;
+
+                &:hover {
+                    color: var(--secondary-color);
+                    padding-left: 5px;
+                }
+            }
+        }
+    }
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.3);
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    font-size: 0.8rem;
+
+    .divider {
+        display: block;
+        width: 50px;
+        height: 2px;
+        background: var(--secondary-color);
+        margin: 10px auto;
+    }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "description": "A Node.js backend API providing robust encryption and decryption services via the Caesar Cipher algorithm. Features customizable shift parameters and clean string processing for secure data handling.",
+  "license": "MIT",
+  "author": "RyanCNP",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "build": "echo \"No build step required for this project.\""
+  }
+}
