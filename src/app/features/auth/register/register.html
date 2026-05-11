@@ -1,24 +1,24 @@
 <div class="auth-container">
-  <form class="auth-form">
+  <form class="auth-form" (submit)="onRegister(); $event.preventDefault()">
     <div class="auth-header">
-      <img src="aguia-imperial-romana.png" alt="SPQR" class="auth-logo">
+      <img src="assets/aguia-imperial-romana.png" alt="SPQR" class="auth-logo">
       <h2>Novo Recrutado</h2>
       <p>Crie sua conta para cifrar mensagens</p>
     </div>
 
     <div class="input-group">
       <label for="reg-name">Nome Completo</label>
-      <input type="text" id="reg-name" placeholder="Seu Nome" required>
+      <input type="text" id="reg-name" name="nome" [(ngModel)]="user.nome" placeholder="Seu Nome" required>
     </div>
 
     <div class="input-group">
-      <label for="reg-user">Usuário</label>
-      <input type="text" id="reg-user" placeholder="Nome de usuário" required>
+      <label for="reg-email">E-mail</label>
+      <input type="email" id="reg-email" name="email" [(ngModel)]="user.email" placeholder="seu@email.com" required>
     </div>
 
     <div class="input-group">
       <label for="reg-password">Senha</label>
-      <input type="password" id="reg-password" placeholder="Mínimo 8 caracteres" required>
+      <input type="password" id="reg-password" name="senha" [(ngModel)]="user.senha" placeholder="Mínimo 8 caracteres" required>
     </div>
 
     <button type="submit" class="btn-base btn-gold full-width">Cadastrar</button>
