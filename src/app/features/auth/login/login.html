@@ -1,5 +1,5 @@
 <div class="auth-container">
-  <form class="auth-form">
+  <form class="auth-form" (submit)="onLogin(); $event.preventDefault()">
     <div class="auth-header">
       <img src="aguia-imperial-romana.png" alt="SPQR" class="auth-logo">
       <h2>Identificação</h2>
@@ -8,15 +8,27 @@
 
     <div class="input-group">
       <label for="useremail">Usuário</label>
-      <input type="email" id="useremail" placeholder="digite seu email..." required>
+      <input 
+        type="email" 
+        id="useremail" 
+        name="email" 
+        [(ngModel)]="credentials.email" 
+        placeholder="digite seu email..." 
+        required>
     </div>
 
     <div class="input-group">
       <label for="password">Senha</label>
-      <input type="password" id="password" placeholder="digite sua senha..." required>
+      <input 
+        type="password" 
+        id="password" 
+        name="senha" 
+        [(ngModel)]="credentials.senha" 
+        placeholder="digite sua senha..." 
+        required>
     </div>
 
-    <button type="submit" (submit)="onLogin()" class="btn-base btn-primary full-width">Entrar</button>
+    <button type="submit" class="btn-base btn-primary full-width">Entrar</button>
 
     <p class="auth-footer">
       Não possui acesso? <a routerLink="/register">Solicitar Cadastro</a>

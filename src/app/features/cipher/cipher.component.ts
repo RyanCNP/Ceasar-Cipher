@@ -19,12 +19,14 @@ export class CipherComponent {
   decryptHash = '';
   decryptedText = '';
 
+
   constructor(private cipherService: CipherService) {}
 
   onEncrypt() {
     this.cipherService.encrypt(this.textToEncrypt, this.encryptStep).subscribe({
       next: (res) => {
         this.generatedHash = res.hash;
+        this.textToDecrypt = res.resultado;
       },
       error: (err) => alert('Erro ao criptografar')
     });
@@ -33,10 +35,11 @@ export class CipherComponent {
   onDecrypt() {
     this.cipherService.decrypt(this.textToDecrypt, this.decryptHash).subscribe({
       next: (res) => {
-        this.decryptedText = res.textoClaro;
+        this.decryptedText = res.resultado;
       },
       error: (err) => {
         alert('Hash inválido ou já utilizado anteriormente!');
+        console.error('Erro ao descriptografar:', err);
       }
     });
   }

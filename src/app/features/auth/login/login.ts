@@ -16,9 +16,11 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   onLogin() {
+    console.log("Chamando função cadastro")
     this.authService.login(this.credentials).subscribe({
       next: (res) => {
         alert('Ave, Legionário! Login realizado.');
+        localStorage.setItem('token', res.token);
         this.router.navigate(['/home']);
       },
       error: (err) => {
