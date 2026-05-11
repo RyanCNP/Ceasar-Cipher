@@ -1,0 +1,91 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-color: var(--background-color); /* Mármore Carrara */
+    padding: 2rem;
+}
+
+.auth-form {
+    background-color: var(--background-color2); /* Seu tom de Pergaminho #F1E9D2 */
+    padding: 3rem;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1), 0 0 0 5px var(--secondary-color); /* Borda dourada externa */
+    border: 1px solid var(--shadow-color);
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.auth-logo {
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.auth-header h2 {
+    font-family: var(--text-primary-font);
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.auth-header p {
+    font-family: var(--text-secondary-font);
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-family: var(--text-primary-font);
+    color: var(--quaternary-color); /* Azul Escuro para os labels */
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.input-group input {
+    padding: 0.8rem;
+    background: white;
+    border: 2px solid rgba(122, 92, 18, 0.2);
+    font-family: var(--text-secondary-font);
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+}
+
+.full-width {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-family: var(--text-secondary-font);
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.auth-footer a:hover {
+    color: var(--terciary-color);
+}
