@@ -86,3 +86,21 @@
     height: 7rem;
     margin-right: 0.5rem;
 }
+
+.logout-link {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: var(--text-primary-font);
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.logout-link:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.nav-links a.btn-cipher.active {
+    border-bottom: 1px solid var(--secondary-color) !important;
+}

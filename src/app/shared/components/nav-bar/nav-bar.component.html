@@ -1,28 +1,19 @@
 <nav class="roman-navbar">
     <div class="nav-container">
-        <!-- Logo e Título -->
         <div class="nav-brand" routerLink="/">
             <img src="aguia-imperial-romana.png" alt="Águia Imperial Romana" class="nav-logo">
             <span class="nav-title">Cifra de César</span>
         </div>
 
-        <!-- Links de Navegação -->
         <ul class="nav-links">
-            <li>
-                <a routerLink="/home" routerLinkActive="active">
-                    Home
-                </a>
-            </li>
-            <li>
-                <a routerLink="/curiosidades" routerLinkActive="active">
-                    Curiosidades
-                </a>
-            </li>
-            <li>
-                <a routerLink="/cifra" routerLinkActive="active" class="btn-cipher a">
-                    Cifrador
-                </a>
-            </li>
+            <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li><a routerLink="/curiosidades" routerLinkActive="active">Curiosidades</a></li>
+
+            <li *ngIf="!isLoggedIn()"><a routerLink="/login">Login</a></li>
+            <li *ngIf="!isLoggedIn()"><a routerLink="/register" routerLinkActive="active" class="btn-cipher">Cadastrar</a></li>
+
+            <li *ngIf="isLoggedIn()"><a routerLink="/cifra" routerLinkActive="active" class="btn-cipher">Cifrador</a></li>
+            <li *ngIf="isLoggedIn()"><a (click)="logout()" class="logout-link">Sair</a></li>
         </ul>
     </div>
 </nav>
