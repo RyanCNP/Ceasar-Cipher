@@ -1,1 +1,63 @@
-<p>cipher component works!</p>
+<div class="cipher-container">
+    <div class="cipher-grid">
+
+        <section class="cipher-card">
+            <div class="card-header">
+                <i class="fas fa-scroll"></i>
+                <h2>Criptografar</h2>
+                <p>Prepare uma mensagem oficial para as legiões.</p>
+            </div>
+
+            <div class="input-group">
+                <label for="msgEncrypt">Mensagem em Claro</label>
+                <textarea id="msgEncrypt" [(ngModel)]="textToEncrypt"
+                    placeholder="Ex: Veni, Vidi, Vici"></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="step">Passo (Deslocamento a-z, 0-9)</label>
+                <input type="number" id="step" [(ngModel)]="encryptStep" placeholder="3">
+            </div>
+
+            <button (click)="onEncrypt()" class="btn-cipher full-width">
+                Cifrar Mensagem
+            </button>
+
+            <div *ngIf="generatedHash" class="result-box">
+                <p class="result-label">Hash da Mensagem (Chave Única):</p>
+                <code class="hash-display">{{ generatedHash }}</code>
+                <p class="warning-text">Atenção: Este hash só pode ser usado uma vez.</p>
+            </div>
+        </section>
+
+        <section class="cipher-card">
+            <div class="card-header">
+                <i class="fas fa-key"></i>
+                <h2>Descriptografar</h2>
+                <p>Valide o selo e revele o conteúdo oculto.</p>
+            </div>
+
+            <div class="input-group">
+                <label for="msgDecrypt">Mensagem Criptografada</label>
+                <textarea id="msgDecrypt" [(ngModel)]="textToDecrypt"
+                    placeholder="Insira o texto cifrado..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label for="hashInput">Hash Correspondente</label>
+                <input type="text" id="hashInput" [(ngModel)]="decryptHash"
+                    placeholder="Insira o hash para validação">
+            </div>
+
+            <button (click)="onDecrypt()" class="btn-cipher gold-variant full-width">
+                Decifrar e Validar
+            </button>
+
+            <div *ngIf="decryptedText" class="result-box success">
+                <p class="result-label">Mensagem Original:</p>
+                <p class="clear-text">{{ decryptedText }}</p>
+            </div>
+        </section>
+
+    </div>
+</div>

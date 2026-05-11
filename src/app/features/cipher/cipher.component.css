@@ -1,0 +1,60 @@
+.cipher-container {
+    padding: 3rem 1rem;
+    background-color: var(--background-color); /* Mármore Carrara */
+    min-height: 80vh;
+}
+
+.cipher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.cipher-card {
+    background-color: #F1E9D2; /* Cor de pergaminho sugerida */
+    padding: 2.5rem;
+    border-radius: 4px;
+    border: 1px solid var(--secondary-color);
+    box-shadow: 6px 6px 0px var(--shadow-color); /* Sombra bronzeada */
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea, input {
+    padding: 0.8rem;
+    border: 1px solid rgba(122, 92, 18, 0.3);
+    border-radius: 2px;
+    font-family: var(--text-secondary-font);
+}
+
+.result-box {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: rgba(122, 92, 18, 0.05);
+    border-left: 4px solid var(--primary-color);
+}
+
+.hash-display {
+    display: block;
+    padding: 0.5rem;
+    background: #fff;
+    color: var(--terciary-color);
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+.full-width {
+    width: 100%;
+}

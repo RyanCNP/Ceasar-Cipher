@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Cipher } from './cipher.component';
+import { CipherComponent } from './cipher.component';
 
-describe('Cipher', () => {
-  let component: Cipher;
-  let fixture: ComponentFixture<Cipher>;
+describe('CipherComponent', () => {
+  let component: CipherComponent;
+  let fixture: ComponentFixture<CipherComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Cipher]
+      imports: [CipherComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Cipher);
+    fixture = TestBed.createComponent(CipherComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
