@@ -11,12 +11,10 @@ import { CommonModule } from '@angular/common';
   standalone: true
 })
 export class CipherComponent {
-  // Variáveis para Criptografia
   textToEncrypt = '';
   encryptStep = 3;
   generatedHash = '';
 
-  // Variáveis para Descriptografia
   textToDecrypt = '';
   decryptHash = '';
   decryptedText = '';
@@ -26,8 +24,7 @@ export class CipherComponent {
   onEncrypt() {
     this.cipherService.encrypt(this.textToEncrypt, this.encryptStep).subscribe({
       next: (res) => {
-        this.generatedHash = res.hash; // Hash que servirá como chave privada [cite: 24]
-        // Você também pode exibir a mensagem cifrada aqui
+        this.generatedHash = res.hash;
       },
       error: (err) => alert('Erro ao criptografar')
     });
@@ -36,10 +33,9 @@ export class CipherComponent {
   onDecrypt() {
     this.cipherService.decrypt(this.textToDecrypt, this.decryptHash).subscribe({
       next: (res) => {
-        this.decryptedText = res.textoClaro; // Exibe a mensagem original [cite: 36]
+        this.decryptedText = res.textoClaro;
       },
       error: (err) => {
-        // Exibe mensagem de erro caso o hash seja inválido ou já usado [cite: 37, 48]
         alert('Hash inválido ou já utilizado anteriormente!');
       }
     });

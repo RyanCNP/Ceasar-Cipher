@@ -6,19 +6,19 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CipherService {
-  private readonly API_URL = 'http://seu-backend/api';
+  private readonly API_URL = 'http://localhost:3000/user';
 
   constructor(private http: HttpClient) {}
 
   encrypt(message: string, step: number): Observable<any> {
-    return this.http.post(`${this.API_URL}/encrypt`, {
+    return this.http.post(`${this.API_URL}/criptografar`, {
       mensagem: message,
       passo: step
     });
   }
 
   decrypt(encryptedMessage: string, hash: string): Observable<any> {
-    return this.http.post(`${this.API_URL}/decrypt`, {
+    return this.http.post(`${this.API_URL}/descriptografar`, {
       mensagemCifrada: encryptedMessage,
       hash: hash
     });
