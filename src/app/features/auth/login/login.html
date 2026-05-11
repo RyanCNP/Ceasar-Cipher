@@ -16,7 +16,7 @@
       <input type="password" id="password" placeholder="digite sua senha..." required>
     </div>
 
-    <button type="submit" class="btn-base btn-primary full-width">Entrar</button>
+    <button type="submit" (submit)="onLogin()" class="btn-base btn-primary full-width">Entrar</button>
 
     <p class="auth-footer">
       Não possui acesso? <a routerLink="/register">Solicitar Cadastro</a>
